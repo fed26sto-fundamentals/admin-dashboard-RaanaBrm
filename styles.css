@@ -1,0 +1,87 @@
+/* General Reset */
+body, h1, p, ul, li, a, footer, header, nav, main {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Apply Grid Layout */
+.container {
+    display: grid;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-columns: 240px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    height: 100vh;
+}
+
+/* Header Styling */
+.header {
+    grid-area: header;
+    background-color: #1abc9c; /* Turquoise */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #34495e; /* Dark Blue */
+    color: #ecf0f1;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Sidebar Hover and Active State */
+.sidebar li.active a,
+.sidebar a:hover {
+    background-color: #1abc9c; /* Turquoise */
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+/* Main Content Styling */
+.main-content {
+    grid-area: main;
+    background-color: #f4f7f6; /* Light Gray */
+    color: #2c3e50;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.main-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 20
+
